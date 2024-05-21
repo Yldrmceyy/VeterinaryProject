@@ -1,4 +1,4 @@
-package dev.cey.controller;
+package dev.cey.api;
 
 public class AnimalController {
 }

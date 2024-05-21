@@ -1,5 +1,7 @@
 package dev.cey.core.utilies;
 
+import dev.cey.core.result.Result;
+import dev.cey.core.result.ResultData;
 import dev.cey.dto.response.CursorResponse;
 import org.springframework.data.domain.Page;
 
