@@ -15,13 +15,13 @@ public class AnimalSaveRequest {
         @NotNull(message = "Animal species cannot be empty.")
         private String species;
 
-        @NotNull(message = "Animal breed cannot be empty.")
+        @NotNull(message = "Animal breed cannot be null.")
         private String breed;
 
-        @NotNull(message = "Animal gender cannot be empty.")
+        @NotNull(message = "Animal gender cannot be null.")
         private String gender;
 
-        @NotNull(message = "Animal color cannot be empty.")
+        @NotNull(message = "Animal color cannot be null.")
         private String color;
 
         @NotNull(message = "Animal date of birth cannot be empty.")
