@@ -12,7 +12,7 @@ public class AppointmentUpdateRequest {
     @Positive(message = "Appointment id must be positive.")
     private Long id;
     @NotNull(message = "Appointment Date cannot be empty.")
-    private LocalDateTime appointmentDateTime;
+    private LocalDateTime dateTime;
     @NotNull(message = "Animal id cannot be empty.")
     @NotNull(message = "Animal id cannot be null.")
     @Positive(message = "Animal id must be positive.")
