@@ -1,7 +1,6 @@
 package dev.cey.dto.request;
 
 import dev.cey.entities.Doctor;
-
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
@@ -13,6 +12,6 @@ public class AvailableDateSaveRequest {
     private LocalDate date;
     @NotNull(message = "Doctor id cannot be empty.")
 
-   // private Long doctorId;
+    // private Long doctorId;
     private Doctor doctor;
 }

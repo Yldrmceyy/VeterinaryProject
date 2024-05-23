@@ -37,7 +37,7 @@ public class VaccineManager implements IVaccineService {
 
         List<Vaccine> existVaccines = this.findByCodeAndName(vaccineSaveRequest.getCode(), vaccineSaveRequest.getName());
         if (!existVaccines.isEmpty() && existVaccines.get(0).getProtectionFinishDate().isAfter(LocalDate.now())){
-            return ResultHelper.error("Aynı koda sahip aşının bitiş tarihi bitmemiş! ");
+            return ResultHelper.error("The protection period of the vaccine with the same code is still ongoing!");
         }
         if (!existVaccines.isEmpty()){
             throw new DataAlreadyExistException(Msg.getEntityForMsg(Vaccine.class));

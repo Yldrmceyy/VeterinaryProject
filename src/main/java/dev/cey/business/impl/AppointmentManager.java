@@ -42,7 +42,7 @@ public class AppointmentManager implements IAppointmentService {
     public ResultData<AppointmentResponse> save(AppointmentSaveRequest appointmentSaveRequest) {
         LocalDateTime dateTime = appointmentSaveRequest.getDateTime();
         if (dateTime.getMinute() != 0) {
-            return ResultHelper.error("Lütfen dakika bilgisini '00' giriniz.");
+            return ResultHelper.error("Please enter the minute information as '00'.");
         }
 
         Optional<Appointment> appointmentOptional = this.findByValueForValid(
@@ -71,9 +71,9 @@ public class AppointmentManager implements IAppointmentService {
         saveAppointment.setDateTime(dateTime);
 
         if (doctorList.isEmpty()) {
-            return ResultHelper.error("Doktor bu tarihte müsait değildir.");
+            return ResultHelper.error("The doctor is not available on this date.");
         } else if (!appointmentByDate.isEmpty()) {
-            return ResultHelper.error("Doktorun bu saatte randevusu bulunmaktadır.");
+            return ResultHelper.error("The doctor has an appointment at this time.");
         } else {
             return ResultHelper.created(this.modelMapperService.forResponse().map(this.appointmentRepo.save(saveAppointment), AppointmentResponse.class));
         }
