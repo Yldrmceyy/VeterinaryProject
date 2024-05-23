@@ -1,4 +1,4 @@
-package dev.cey.api;
+package dev.cey.controller;
 
 import dev.cey.business.abstracts.IVaccineService;
 import dev.cey.core.result.Result;
