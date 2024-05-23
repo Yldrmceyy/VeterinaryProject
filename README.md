@@ -24,6 +24,7 @@ This project is an API developed to manage the business processes of a veterinar
 
 ## Project Architecture
 
+
 The project follows a layered architecture. The main package structure is as follows:
 
 - `controller`: API endpoints
@@ -35,7 +36,7 @@ The project follows a layered architecture. The main package structure is as fol
 
 ### UML Diagram
 
-![UML Diagram](VeterinaryProject_UML.png)
+![VeterinaryProject_UML](https://github.com/Yldrmceyy/VeterinaryProject/assets/106755050/ba7ade62-00e9-46cb-9953-fa18dd1636e0)
 
 
 ## Setup
