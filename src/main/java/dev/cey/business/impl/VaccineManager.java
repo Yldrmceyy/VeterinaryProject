@@ -71,9 +71,20 @@ public class VaccineManager implements IVaccineService {
         return ResultHelper.success(vaccineResponseList);
     }
 
+
+//    @Override
+//    public ResultData<List<VaccineResponse>> findByDate(LocalDate entryDate, LocalDate exitDate) {
+//        List<Vaccine> vaccineList = this.vaccineRepo.findByprotectionFinishDateBetween(entryDate, exitDate);
+//        List<VaccineResponse> vaccineResponseList = this.convert.convertToResponseList(vaccineList, VaccineResponse.class);
+//        return ResultHelper.success(vaccineResponseList);
+//    }
+
     @Override
     public ResultData<List<VaccineResponse>> findByDate(LocalDate entryDate, LocalDate exitDate) {
         List<Vaccine> vaccineList = this.vaccineRepo.findByprotectionFinishDateBetween(entryDate, exitDate);
+        if (vaccineList.isEmpty()) {
+            return ResultHelper.error("Belirtilen tarih aralığında aşı bulunamadı.");
+        }
         List<VaccineResponse> vaccineResponseList = this.convert.convertToResponseList(vaccineList, VaccineResponse.class);
         return ResultHelper.success(vaccineResponseList);
     }
@@ -85,10 +96,12 @@ public class VaccineManager implements IVaccineService {
 
     @Override
     public ResultData<VaccineResponse> update(VaccineUpdateRequest vaccineUpdateRequest) {
-        this.get(vaccineUpdateRequest.getId());
-        Vaccine updateVaccine = this.modelMapperService.forRequest().map(vaccineUpdateRequest, Vaccine.class);
-        return ResultHelper.success(this.modelMapperService.forResponse().map(updateVaccine, VaccineResponse.class));
+        Vaccine existingVaccine = this.get(vaccineUpdateRequest.getId());
+        this.modelMapperService.forRequest().map(vaccineUpdateRequest, existingVaccine);
+        Vaccine savedVaccine = this.vaccineRepo.save(existingVaccine);
+        return ResultHelper.success(this.modelMapperService.forResponse().map(savedVaccine, VaccineResponse.class));
     }
+
 
     @Override
     public boolean delete(Long id) {

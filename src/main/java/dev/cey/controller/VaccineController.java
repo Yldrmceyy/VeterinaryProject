@@ -50,9 +50,10 @@ public class VaccineController {
     public ResultData<List<VaccineResponse>> getVaccineByAnimalId(@PathVariable("id") Long animalId){
         return this.vaccineService.findByAnimalId(animalId);
     }
+
     @GetMapping("/findByDate")
     public ResultData<List<VaccineResponse>> getVaccinesByDate(
-            @RequestParam(name = "entryDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate entryDate,
+            @RequestParam(name = "entryDate") @DateTimeFormat(pattern = "yyyy-MM-dd")LocalDate entryDate,
             @RequestParam(name = "exitDate") @DateTimeFormat(pattern = "yyyy-MM-dd")LocalDate exitDate
     ){
         return this.vaccineService.findByDate(entryDate,exitDate);
