@@ -15,15 +15,19 @@ import java.time.LocalDate;
 public class Vaccine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @NotNull
+    @Column(name = "vaccine_id", columnDefinition = "serial")
+    private int id;
+
+    @Column(name = "vaccine_name")
     private String name;
+    @Column(name = "vaccine_code")
     private String code;
+    @Column(name = "vaccine_protectionStartDate")
     private LocalDate protectionStartDate;
+    @Column(name = "vaccine_protectionFinishDate")
     private LocalDate protectionFinishDate;
 
     @ManyToOne()
-    @NotNull
-    @JoinColumn(name = "animal_id", referencedColumnName = "id")
+    @JoinColumn(name = "vaccine_animal_id", referencedColumnName = "animal_id")
     private Animal animal;
 }

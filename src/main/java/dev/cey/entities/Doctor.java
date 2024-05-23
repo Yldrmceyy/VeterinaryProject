@@ -1,5 +1,6 @@
 package dev.cey.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -16,17 +17,25 @@ import java.util.List;
 public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @NotNull
+    @Column(name = "doctor_id", columnDefinition = "serial")
+    private int id;
+
+    @Column(name = "doctor_name")
     private String name;
+    @Column(name = "doctor_phone")
     private String phone;
+    @Column(name = "doctor_mail")
     private String mail;
+    @Column(name = "doctor_address")
     private String address;
+    @Column(name = "doctor_city")
     private String city;
 
-    @OneToMany(mappedBy = "doctor")
-    private List<AvailableDate> availableDates;
-
-    @OneToMany(mappedBy = "doctor")
+    @OneToMany(mappedBy = "doctor", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @JsonIgnore
     private List<Appointment> appointments;
+
+    @OneToMany(mappedBy = "doctor", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    private List<AvailableDate> availableDate;
 }

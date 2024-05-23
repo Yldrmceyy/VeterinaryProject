@@ -16,12 +16,14 @@ import java.time.LocalDate;
 public class AvailableDate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private LocalDate available;
+    @Column(name = "availableDate_id", columnDefinition = "serial")
+    private int id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
     @NotNull
-    @JoinColumn(name = "doctor_id", referencedColumnName = "id")
-    @JsonIgnore
+    @Column(name = "availableDate_date")
+    private LocalDate date;
+
+    @ManyToOne()
+    @JoinColumn(name = "availableDate_doctor_id", referencedColumnName = "doctor_id")
     private Doctor doctor;
 }
