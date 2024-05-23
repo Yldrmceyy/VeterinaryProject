@@ -8,19 +8,29 @@ import java.time.LocalDate;
 
 @Data
 public class AnimalUpdateRequest {
-    @NotNull(message = "Animal name cannot be empty.")
-    @NotNull(message = "Animal id cannot be null.")
-    @Positive(message = "Animal id must be positive.")
+    @Positive(message = "ID must be positive.")
+    @NotNull(message = "Animal ID cannot be empty.")
     private Long id;
+
     @NotNull(message = "Animal name cannot be empty.")
     private String name;
+
+    @NotNull(message = "Animal species cannot be empty.")
     private String species;
+
+    @NotNull(message = "Animal breed cannot be empty.")
     private String breed;
+
+    @NotNull(message = "Animal gender cannot be empty.")
     private String gender;
-    private String colour;
+
+    @NotNull(message = "Animal color cannot be empty.")
+    private String color;
+
+    @NotNull(message = "Animal date of birth cannot be empty.")
     private LocalDate dateOfBirth;
-    @NotNull(message = "Customer id cannot be empty.")
-    @NotNull(message = "Customer id cannot be null.")
-    @Positive(message = "Customer id must be positive.")
+
+    // @NotNull(message = "Customer ID cannot be empty.")
+    // @Positive(message = "Customer ID must be positive.")
     private Long customerId;
 }
