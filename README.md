@@ -74,6 +74,7 @@ The project follows a layered architecture. The main package structure is as fol
 5. Load the sample data into the database (use the .sql file provided in the project folder).
 
 ## API Usage
+### Swagger Screenshots
 
 ## API Endpoints
 
