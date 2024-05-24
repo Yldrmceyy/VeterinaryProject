@@ -6,9 +6,10 @@ This project is an API developed to manage the business processes of a veterinar
 
 - [Technologies Used](#technologies-used)
 - [Project Architecture](#project-architecture)
+- [Database Schema](#database-schema)
 - [Setup](#setup)
 - [API Usage](#api-usage)
-- [Database Schema](#database-schema)
+
 
 
 ## Technologies Used
@@ -35,6 +36,18 @@ The project follows a layered architecture. The main package structure is as fol
 - `dto`: Data Transfer Objects (Request and Response)
 - `entities`: Database entities
 - `core`: Utility classes and configurations
+
+## Database Schema
+
+The database schema includes the following tables:
+
+- `customers`: Customer information
+- `animals`: Animal information
+- `vaccines`: Vaccine information
+- `doctors`: Doctor information
+- `available_dates`: Doctor availability dates
+- `appointments`: Appointment information
+
 
 ### UML Diagram
 
@@ -118,15 +131,5 @@ The project follows a layered architecture. The main package structure is as fol
 | /v1/animals/{name}                             | GET         | Retrieve animal records with a specific name.           |
 | /v1/animals/customer/{id}                      | GET         | Retrieve all animal records for a specific customer.    |
 
-## Database Schema
-
-The database schema includes the following tables:
-
-- `customers`: Customer information
-- `animals`: Animal information
-- `vaccines`: Vaccine information
-- `doctors`: Doctor information
-- `available_dates`: Doctor availability dates
-- `appointments`: Appointment information
 
 
