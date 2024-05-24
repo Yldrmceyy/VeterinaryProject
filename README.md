@@ -75,105 +75,47 @@ The project follows a layered architecture. The main package structure is as fol
 
 ## API Usage
 
-### Customer Management
+## API Endpoints
 
-- **Add Customer**
-    - Endpoint: `POST /api/customers`
-    - Request Body:
-      ```json
-      {
-          "name": "John Doe",
-          "phone": "1234567890",
-          "mail": "john@example.com",
-          "address": "123 Main St",
-          "city": "Anytown"
-      }
-      ```
-
-- **Update Customer Information**
-    - Endpoint: `PUT /api/customers/{id}`
-    - Request Body: Same as above
-
-- **View Customer Information**
-    - Endpoint: `GET /api/customers/{id}`
-
-- **Delete Customer**
-    - Endpoint: `DELETE /api/customers/{id}`
-
-### Animal Management
-
-- **Add Animal**
-    - Endpoint: `POST /api/animals`
-    - Request Body:
-      ```json
-      {
-          "name": "Buddy",
-          "species": "Dog",
-          "breed": "Labrador",
-          "gender": "Male",
-          "colour": "Yellow",
-          "dateOfBirth": "2018-06-01",
-          "customerId": 1
-      }
-      ```
-
-- **Update Animal Information**
-    - Endpoint: `PUT /api/animals/{id}`
-    - Request Body: Same as above
-
-- **View Animal Information**
-    - Endpoint: `GET /api/animals/{id}`
-
-- **Delete Animal**
-    - Endpoint: `DELETE /api/animals/{id}`
-
-### Vaccine Management
-
-- **Add Vaccine**
-    - Endpoint: `POST /api/vaccines`
-    - Request Body:
-      ```json
-      {
-          "name": "Rabies",
-          "code": "RAB123",
-          "protectionStartDate": "2023-01-01",
-          "protectionFinishDate": "2024-01-01",
-          "animalId": 1
-      }
-      ```
-
-- **Update Vaccine Information**
-    - Endpoint: `PUT /api/vaccines/{id}`
-    - Request Body: Same as above
-
-- **View Vaccine Information**
-    - Endpoint: `GET /api/vaccines/{id}`
-
-- **Delete Vaccine**
-    - Endpoint: `DELETE /api/vaccines/{id}`
-
-### Appointment Management
-
-- **Add Appointment**
-    - Endpoint: `POST /api/appointments`
-    - Request Body:
-      ```json
-      {
-          "appointmentDate": "2023-06-15T14:00:00",
-          "doctorId": 1,
-          "animalId": 1
-      }
-      ```
-
-- **Update Appointment Information**
-    - Endpoint: `PUT /api/appointments/{id}`
-    - Request Body: Same as above
-
-- **View Appointment Information**
-    - Endpoint: `GET /api/appointments/{id}`
-
-- **Delete Appointment**
-    - Endpoint: `DELETE /api/appointments/{id}`
+| Endpoint                                       | HTTP Method | Description                                             |
+|------------------------------------------------|-------------|---------------------------------------------------------|
+| **Vaccine Operations**                         |             |                                                         |
+| /v1/vaccines                                   | POST        | Create a new vaccine record.                            |
+| /v1/vaccines                                   | GET         | Retrieve all vaccine records.                           |
+| /v1/vaccines                                   | PUT         | Update an existing vaccine record.                      |
+| /v1/vaccines/{id}                              | DELETE      | Delete a specific vaccine record.                       |
+| /v1/vaccines/animal/{id}                       | GET         | Retrieve all vaccine records for a specific animal.     |
+| /v1/vaccines/findByDate                        | GET         | Retrieve vaccine records for a specific date range.     |
+| **Doctor Operations**                          |             |                                                         |
+| /v1/doctors                                    | POST        | Create a new doctor record.                             |
+| /v1/doctors                                    | PUT         | Update an existing doctor record.                       |
+| /v1/doctors                                    | GET         | Retrieve all doctor records.                            |
+| /v1/doctors/{id}                               | DELETE      | Delete a specific doctor record.                        |
+| **Customer Operations**                        |             |                                                         |
+| /v1/customers                                  | POST        | Create a new customer record.                           |
+| /v1/customers                                  | PUT         | Update an existing customer record.                     |
+| /v1/customers                                  | GET         | Retrieve all customer records.                          |
+| /v1/customers/{id}                             | DELETE      | Delete a specific customer record.                      |
+| /v1/customers/{name}                           | GET         | Retrieve customer records with a specific name.         |
+| **Available Date Operations**                  |             |                                                         |
+| /v1/available-dates                            | POST        | Create a new available date record.                     |
+| /v1/available-dates                            | PUT         | Update an existing available date record.               |
+| /v1/available-dates                            | GET         | Retrieve all available date records.                    |
+| /v1/available-dates/{id}                       | DELETE      | Delete a specific available date record.               |
+| **Appointment Operations**                     |             |                                                         |
+| /v1/appointments                               | POST        | Create a new appointment record.                        |
+| /v1/appointments                               | GET         | Retrieve all appointment records.                       |
+| /v1/appointments                               | PUT         | Update an existing appointment record.                 |
+| /v1/appointments/{id}                          | DELETE      | Delete a specific appointment record.                   |
+| /v1/appointments/filterByDoctorDate/{doctorId}-{findByDate} | GET | Filter appointments by a specific doctor and date range. |
+| /v1/appointments/filterByAnimalDate/{animalId}-{findByDate} | GET | Filter appointments by a specific animal and date range. |
+| **Animal Operations**                          |             |                                                         |
+| /v1/animals                                    | POST        | Create a new animal record.                             |
+| /v1/animals                                    | GET         | Retrieve all animal records.                            |
+| /v1/animals                                    | PUT         | Update an existing animal record.                      |
+| /v1/animals/{id}                               | DELETE      | Delete a specific animal record.                        |
+| /v1/animals/{name}                             | GET         | Retrieve animal records with a specific name.           |
+| /v1/animals/customer/{id}                      | GET         | Retrieve all animal records for a specific customer.    |
 
 ## Database Schema
 
