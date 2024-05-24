@@ -12,15 +12,17 @@ This project is an API developed to manage the business processes of a veterinar
 
 
 ## Technologies Used
+<code><img width="50" src="https://user-images.githubusercontent.com/25181517/117201156-9a724800-adec-11eb-9a9d-3cd0f67da4bc.png" alt="Java" title="Java"/></code>
+<code><img width="50" src="https://user-images.githubusercontent.com/25181517/183891303-41f257f8-6b3d-487c-aa56-c497b880d0fb.png" alt="Spring Boot" title="Spring Boot"/></code>
+<code><img width="50" src="https://user-images.githubusercontent.com/25181517/117207242-07d5a700-adf4-11eb-975e-be04e62b984b.png" alt="Maven" title="Maven"/></code>
+<code><img width="50" src="https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png" alt="PostgreSQL" title="PostgreSQL"/></code>
+<code><img width="50" src="https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c502-4009-8c47-476fc89718ad.png" alt="REST" title="REST"/></code>
+<code><img width="50" src="https://user-images.githubusercontent.com/25181517/186711335-a3729606-5a78-4496-9a36-06efcc74f800.png" alt="Swagger" title="Swagger"/></code>
+<code><img width="50" src="https://user-images.githubusercontent.com/25181517/192109061-e138ca71-337c-4019-8d42-4792fdaa7128.png" alt="Postman" title="Postman"/></code>
+<code><img width="50" src="https://user-images.githubusercontent.com/25181517/192108890-200809d1-439c-4e23-90d3-b090cf9a4eea.png" alt="IntelliJ IDEA" title="IntelliJ IDEA"/></code>
+<code><img width="50" src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png" alt="Git" title="Git"/></code>
+<code><img width="50" src="https://user-images.githubusercontent.com/25181517/192108374-8da61ba1-99ec-41d7-80b8-fb2f7c0a4948.png" alt="GitHub" title="GitHub"/></code>
 
-- Java 
-- Spring Boot
-- Spring Data JPA
-- Hibernate
-- PostgreSQL
-- ModelMapper
-- Lombok
-- Swagger
 
 ## Project Architecture
 
@@ -44,8 +46,8 @@ The project follows a layered architecture. The main package structure is as fol
 1. Clone the project:
 
     ```sh
-    git clone https://github.com/yourusername/veterinary-management-system.git
-    cd veterinary-management-system
+    git clone https://github.com/Yldrmceyy/VeterinaryProject.git
+    cd VeterinaryProject
     ```
 
 2. Install the necessary dependencies:
