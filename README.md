@@ -75,6 +75,7 @@ The project follows a layered architecture. The main package structure is as fol
 
 ## API Usage
 ### Swagger Screenshots
+![Swagger](https://github.com/Yldrmceyy/VeterinaryProject/assets/106755050/a87e4c99-84b1-44e2-9552-ac677f2fb6c2)
 
 ## API Endpoints
 
