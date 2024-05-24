@@ -9,6 +9,7 @@ This project is an API developed to manage the business processes of a veterinar
 - [Database Schema](#database-schema)
 - [Setup](#setup)
 - [API Usage](#api-usage)
+- [Entity Tables in Database](#entity-tables-in-database)
 
 
 
