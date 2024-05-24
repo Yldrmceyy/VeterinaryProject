@@ -134,5 +134,8 @@ The database schema includes the following tables:
 | /v1/animals/{name}                             | GET         | Retrieve animal records with a specific name.           |
 | /v1/animals/customer/{id}                      | GET         | Retrieve all animal records for a specific customer.    |
 
+## Entity Tables in Database
+
+![Tablolar](https://github.com/Yldrmceyy/VeterinaryProject/assets/106755050/05f30bdd-3874-4227-8e9d-990fe3fa27a9)
 
 
