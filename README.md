@@ -6,9 +6,10 @@ This project is an API developed to manage the business processes of a veterinar
 
 - [Technologies Used](#technologies-used)
 - [Project Architecture](#project-architecture)
+- [Database Schema](#database-schema)
 - [Setup](#setup)
 - [API Usage](#api-usage)
-- [Database Schema](#database-schema)
+
 
 
 ## Technologies Used
@@ -36,9 +37,22 @@ The project follows a layered architecture. The main package structure is as fol
 - `entities`: Database entities
 - `core`: Utility classes and configurations
 
+
+## Database Schema
+
+The database schema includes the following tables:
+
+- `customers`: Customer information
+- `animals`: Animal information
+- `vaccines`: Vaccine information
+- `doctors`: Doctor information
+- `available_dates`: Doctor availability dates
+- `appointments`: Appointment information
+
+
 ### UML Diagram
 
-![VeterinaryProject_UML](https://github.com/Yldrmceyy/VeterinaryProject/assets/106755050/ba7ade62-00e9-46cb-9953-fa18dd1636e0)
+![VeterinaryProject_UML](https://private-user-images.githubusercontent.com/106755050/333327064-ba7ade62-00e9-46cb-9953-fa18dd1636e0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY1NDQ0MDAsIm5iZiI6MTcxNjU0NDEwMCwicGF0aCI6Ii8xMDY3NTUwNTAvMzMzMzI3MDY0LWJhN2FkZTYyLTAwZTktNDZjYi05OTUzLWZhMThkZDE2MzZlMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTI0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUyNFQwOTQ4MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lMDg0ZDBlMDc2NzU2NzdlZTkwMzdjZGEwYmQwOWNmNTVjMjViZTI2NDM1MDU4YmFlZWE4OWViMjRiZmJlODJjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.eTdNC9qQjWLqMiabDDIC_4odbgVk-9ScCvETE2pYBYE)
 
 
 ## Setup
@@ -75,6 +89,7 @@ The project follows a layered architecture. The main package structure is as fol
 
 ## API Usage
 ### Swagger Screenshots
+![Swagger.png](https://private-user-images.githubusercontent.com/106755050/333539754-a87e4c99-84b1-44e2-9552-ac677f2fb6c2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY1NDQ0MDAsIm5iZiI6MTcxNjU0NDEwMCwicGF0aCI6Ii8xMDY3NTUwNTAvMzMzNTM5NzU0LWE4N2U0Yzk5LTg0YjEtNDRlMi05NTUyLWFjNjc3ZjJmYjZjMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTI0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUyNFQwOTQ4MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mZjA5ZGQ0OWI5M2E5OWNjYjQzMzJiZGY2NDE3NDRiNGI2YWZlOWUxZGQ4OWIxZDMzZWFiYTEwMmM3YWJhY2IwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.0evJn_K_AZvBNso0Eik4Ql1JWbWNrydX14SPjlcHyDQ)
 
 ## API Endpoints
 
@@ -117,16 +132,5 @@ The project follows a layered architecture. The main package structure is as fol
 | /v1/animals/{id}                               | DELETE      | Delete a specific animal record.                        |
 | /v1/animals/{name}                             | GET         | Retrieve animal records with a specific name.           |
 | /v1/animals/customer/{id}                      | GET         | Retrieve all animal records for a specific customer.    |
-
-## Database Schema
-
-The database schema includes the following tables:
-
-- `customers`: Customer information
-- `animals`: Animal information
-- `vaccines`: Vaccine information
-- `doctors`: Doctor information
-- `available_dates`: Doctor availability dates
-- `appointments`: Appointment information
 
 
