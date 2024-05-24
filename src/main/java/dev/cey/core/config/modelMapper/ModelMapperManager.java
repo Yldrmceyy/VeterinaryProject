@@ -16,12 +16,14 @@ public class ModelMapperManager implements IModelMapperService {
     }
 
 
+    // Returns ModelMapper configured for request mapping
     @Override
     public ModelMapper forRequest() {
         this.modelMapper.getConfiguration().setAmbiguityIgnored(true).setMatchingStrategy(MatchingStrategies.STANDARD);
         return this.modelMapper;
     }
 
+    // Returns ModelMapper configured for response mapping
     @Override
     public ModelMapper forResponse() {
         this.modelMapper.getConfiguration().setAmbiguityIgnored(true).setMatchingStrategy(MatchingStrategies.LOOSE);
