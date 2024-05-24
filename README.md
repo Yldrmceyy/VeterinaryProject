@@ -86,8 +86,11 @@ The database schema includes the following tables:
 
 5. Load the sample data into the database (use the .sql file provided in the project folder).
 
+
+
 ## API Usage
 ### Swagger Screenshots
+![Swagger](https://github.com/Yldrmceyy/VeterinaryProject/assets/106755050/37aea3b0-c4c1-400c-85d0-136218671221)
 
 ## API Endpoints
 
