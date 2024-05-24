@@ -32,14 +32,15 @@ public class VaccineManager implements IVaccineService {
     private final IModelMapperService modelMapperService;
     private final IAnimalService animalService;
     private final ConvertEntityToResponse<Vaccine, VaccineResponse> convert;
+
     @Override
     public ResultData<VaccineResponse> save(VaccineSaveRequest vaccineSaveRequest) {
 
         List<Vaccine> existVaccines = this.findByCodeAndName(vaccineSaveRequest.getCode(), vaccineSaveRequest.getName());
-        if (!existVaccines.isEmpty() && existVaccines.get(0).getProtectionFinishDate().isAfter(LocalDate.now())){
+        if (!existVaccines.isEmpty() && existVaccines.get(0).getProtectionFinishDate().isAfter(LocalDate.now())) {
             return ResultHelper.error("The protection period of the vaccine with the same code is still ongoing!");
         }
-        if (!existVaccines.isEmpty()){
+        if (!existVaccines.isEmpty()) {
             throw new DataAlreadyExistException(Msg.getEntityForMsg(Vaccine.class));
         }
         Animal animal = this.animalService.get(vaccineSaveRequest.getAnimalId());
@@ -91,7 +92,7 @@ public class VaccineManager implements IVaccineService {
 
     @Override
     public List<Vaccine> findByCodeAndName(String code, String name) {
-        return this.vaccineRepo.findByCodeAndName(code,name);
+        return this.vaccineRepo.findByCodeAndName(code, name);
     }
 
     @Override
@@ -102,7 +103,6 @@ public class VaccineManager implements IVaccineService {
         return ResultHelper.success(this.modelMapperService.forResponse().map(savedVaccine, VaccineResponse.class));
     }
 
-
     @Override
     public boolean delete(Long id) {
         Vaccine vaccine = this.get(id);
@@ -110,7 +110,7 @@ public class VaccineManager implements IVaccineService {
         return true;
     }
 
-    public boolean isTrue(){
+    public boolean isTrue() {
         return true;
     }
 
