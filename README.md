@@ -14,14 +14,14 @@ This project is an API developed to manage the business processes of a veterinar
 
 ## Technologies Used
 
-<code><img src="https://skillicons.dev/icons?i=spring" height="40" alt="spring logo"/>
-<code><img src="https://skillicons.dev/icons?i=postgres" height="40" alt="postgresql logo"/>
-<code><img src="https://skillicons.dev/icons?i=java" height="40" alt="java logo"/>
-<code><img src="https://skillicons.dev/icons?i=github" height="40" alt="github logo"/>
-<code><img src="https://skillicons.dev/icons?i=git" height="40" alt="git logo"/>
-<code><img src="https://skillicons.dev/icons?i=postman" height="40" alt="postman logo"/>
-<code><img src="https://skillicons.dev/icons?i=idea" height="40" alt="intellijidea logo"/>
-<code><img src="https://skillicons.dev/icons?i=maven" height="40" alt="apachemaven logo"/>
+<code><img src="https://skillicons.dev/icons?i=spring" height="40" alt="spring logo"/></code>
+<code><img src="https://skillicons.dev/icons?i=postgres" height="40" alt="postgresql logo"/></code>
+<code><img src="https://skillicons.dev/icons?i=java" height="40" alt="java logo"/></code>
+<code><img src="https://skillicons.dev/icons?i=github" height="40" alt="github logo"/></code>
+<code><img src="https://skillicons.dev/icons?i=git" height="40" alt="git logo"/></code>
+<code><img src="https://skillicons.dev/icons?i=postman" height="40" alt="postman logo"/></code>
+<code><img src="https://skillicons.dev/icons?i=idea" height="40" alt="intellijidea logo"/></code>
+<code><img src="https://skillicons.dev/icons?i=maven" height="40" alt="apachemaven logo"/></code>
 <code><img width="46" src="https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c502-4009-8c47-476fc89718ad.png" alt="REST" title="REST"/></code>
 <code><img width="46" src="https://user-images.githubusercontent.com/25181517/186711335-a3729606-5a78-4496-9a36-06efcc74f800.png" alt="Swagger" title="Swagger"/></code>
 
