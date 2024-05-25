@@ -86,6 +86,11 @@ public class AnimalManager implements IAnimalService {
         // Find animals by name
         List<Animal> animalList = this.animalRepo.findByName(name);
 
+        // Check if the customer list is empty and return appropriate result
+        if (animalList.isEmpty()) {
+            return ResultHelper.NotFoundError(Msg.NOT_FOUND);
+        }
+
         // Convert to response DTOs
         List<AnimalResponse> animalResponseList = this.convert.convertToResponseList(animalList, AnimalResponse.class);
 
@@ -97,6 +102,11 @@ public class AnimalManager implements IAnimalService {
     public ResultData<List<AnimalResponse>> findByCustomerId(Long id) {
         // Find animals by customerId
         List<Animal> animalList = this.animalRepo.findByCustomerId(id);
+
+        // Check if the customer list is empty and return appropriate result
+        if (animalList.isEmpty()) {
+            return ResultHelper.NotFoundError(Msg.NOT_FOUND);
+        }
 
         // Convert to response DTOs
         List<AnimalResponse> animalResponseList = this.convert.convertToResponseList(animalList, AnimalResponse.class);

@@ -88,6 +88,11 @@ public class CustomerManager implements ICustomerService {
         // Retrieve customers by name
         List<Customer> customerList = this.customerRepo.findByName(name);
 
+        // Check if the customer list is empty and return appropriate result
+        if (customerList.isEmpty()) {
+            return ResultHelper.NotFoundError(Msg.NOT_FOUND);
+        }
+
         // Convert customer entities to response DTOs
         List<CustomerResponse> customerResponseList = this.convert.convertToResponseList(customerList, CustomerResponse.class);
 

@@ -18,12 +18,16 @@ public class ResultHelper {
     public static Result ok(){
         return new Result(true, Msg.OK, "200");
     }
+
     public static <T> ResultData<T> error(String message){
         return new ResultData<>(false, message, "400", null);
     }
-    public static Result NotFoundError(String msg){
-        return new Result(false, msg, "404");
+
+    public static <T>ResultData<T> NotFoundError(String msg){
+        return new ResultData<>(false, msg, "404", null);
     }
+
+
     public static <T>ResultData<CursorResponse<T>> cursor(Page<T> pageData){
         CursorResponse<T> cursor = new CursorResponse<>();
         cursor.setItems(pageData.getContent());
