@@ -85,7 +85,7 @@ The database schema includes the following tables:
     mvn spring-boot:run
     ```
 
-5. Load the sample data into the database (use the .sql file provided in the project folder).
+5. Load the sample data into the database (use the Vet_Cey.sql file provided in the project folder).
 
 
 
