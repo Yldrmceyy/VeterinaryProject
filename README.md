@@ -1,6 +1,6 @@
 # Veterinary Management System
 
-This project is an API developed to manage the business processes of a veterinary clinic. The system will be used by veterinary staff and includes doctor, customer, and animal management, vaccine records, and appointment tracking.
+This project is an API developed to manage the business processes of a veterinary clinic. It utilizes an n-tier architecture and offers comprehensive functions for managing animals, appointments, doctors, clients, vaccinations, and the current date.
 
 ## Contents
 
