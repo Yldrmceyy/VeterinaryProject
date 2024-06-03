@@ -22,6 +22,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class VaccineController {
     private final IVaccineService vaccineService;
+
+
+
+
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public ResultData<VaccineResponse> save(@Valid @RequestBody VaccineSaveRequest vaccineSaveRequest){

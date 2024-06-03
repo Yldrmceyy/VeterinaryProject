@@ -9,6 +9,7 @@ import dev.cey.dto.request.AppointmentUpdateRequest;
 import dev.cey.dto.response.AppointmentResponse;
 import dev.cey.dto.response.CursorResponse;
 import jakarta.validation.Valid;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -30,9 +31,6 @@ public class AppointmentController {
         return this.appointmentService.save(appointmentSaveRequest);
     }
 
-
-
-
     @GetMapping()
     @ResponseStatus(HttpStatus.OK)
     public ResultData<CursorResponse<AppointmentResponse>> cursor(
@@ -41,13 +39,11 @@ public class AppointmentController {
         return this.appointmentService.cursor(page, pageSize);
     }
 
-
     @PutMapping()
     @ResponseStatus(HttpStatus.OK)
     public ResultData<AppointmentResponse> update(@Valid @RequestBody AppointmentUpdateRequest appointmentUpdateRequest) {
         return this.appointmentService.update(appointmentUpdateRequest);
     }
-
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)

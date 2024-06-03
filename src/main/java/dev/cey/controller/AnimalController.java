@@ -15,11 +15,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/v1/animals")
 @RequiredArgsConstructor
 public class AnimalController {
     private final IAnimalService animalService;
+
+
 
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
