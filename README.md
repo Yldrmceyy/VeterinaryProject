@@ -10,6 +10,7 @@ This project is an API developed to manage the business processes of a veterinar
 - [Setup](#setup)
 - [API Usage](#api-usage)
 - [Entity Tables in Database](#entity-tables-in-database)
+- [Promotional Video](#promotional-video)
 
 
 
@@ -139,4 +140,5 @@ The database schema includes the following tables:
 
 ![Tablolar](https://github.com/Yldrmceyy/VeterinaryProject/assets/106755050/05f30bdd-3874-4227-8e9d-990fe3fa27a9)
 
-
+## Promotional Video
+https://youtu.be/x6Eq8i1eNDk
