@@ -149,6 +149,11 @@ public class AppointmentManager implements IAppointmentService {
         // Find appointments by doctor ID and date range
         List<Appointment> appointmentList = this.appointmentRepo.findByDoctorIdAndDateTimeBetween(id, convertedEntryDate, convertedExitDate);
 
+        // Check if the appointment list is empty and return appropriate result
+        if (appointmentList.isEmpty()) {
+            return ResultHelper.NotFoundError(Msg.NOT_FOUND);
+        }
+
         // Convert appointment entities to response DTOs
         List<AppointmentResponse> appointmentResponseList = this.convert.convertToResponseList(appointmentList, AppointmentResponse.class);
 
@@ -164,6 +169,11 @@ public class AppointmentManager implements IAppointmentService {
 
         // Find appointments by animal ID and date range
         List<Appointment> appointmentList = this.appointmentRepo.findByAnimalIdAndDateTimeBetween(id, convertedEntryDate, convertedExitDate);
+
+        // Check if the appointment list is empty and return appropriate result
+        if (appointmentList.isEmpty()) {
+            return ResultHelper.NotFoundError(Msg.NOT_FOUND);
+        }
 
         // Convert appointment entities to response DTOs
         List<AppointmentResponse> appointmentResponseList = this.convert.convertToResponseList(appointmentList, AppointmentResponse.class);
